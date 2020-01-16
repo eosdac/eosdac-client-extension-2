@@ -1,10 +1,9 @@
-export default {
-  'dacId': 'light',
+import { jungle } from '../../../networks'
 
-  'endpoints': [
-    'https://jungle.eosdac.io',
-    'https://api.jungle.alohaeos.com'
-  ],
+export default {
+  'dacId': 'eos.dac',
+
+  'endpoints': jungle,
 
   'pricefeed': {
     api: 'newdex',
@@ -35,31 +34,11 @@ export default {
 
   'financial_page_graphs': [
     {
-      'account': 'eosdacserval',
-      'contract': 'eosio.token',
-      'symbol': 'EOS',
-      'description':
-            'The EOS Mainnet block producer account for eosDAC which receives Block Producer rewards.'
-    },
-    {
       'account': 'eosdacdoshhq',
       'contract': 'eosio.token',
       'symbol': 'EOS',
       'description':
             'The DAC owner account where DAC funds are secured and controlled by a 12-account multisig permission system of elected custodians.'
-    },
-    {
-      'account': 'dacocoiogmbh',
-      'contract': 'eosio.token',
-      'symbol': 'EOS',
-      'description':
-            'The current eosDAC service provider account which manages payroll, employment contracts, and real-world interactions on behalf of the DAC.'
-    },
-    {
-      'account': 'dacelections',
-      'contract': 'kasdactokens',
-      'symbol': 'KASDAC',
-      'description': 'custodian contract description'
     }
   ],
 
@@ -70,6 +49,7 @@ export default {
 
   'external': {
     'homepage': 'https://eosdac.io',
-    'explorer': 'https://jungle.bloks.io'
+    'explorer_transaction': 'https://jungle.bloks.io/transaction/{transaction_id}',
+    'explorer_msig': 'https://jungle.bloks.io/msig/{proposer}/{proposal_name}'
   }
 }
