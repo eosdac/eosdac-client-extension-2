@@ -154,7 +154,7 @@
                 class="float-right"
                 color="secondary"
                 :label="$t('index.open_discord')"
-                @click.native="openURL($configFile.get('external').discord)"
+                @click.native="openURL('https://discord.io/eosdac')"
               />
             </div>
           </div>
@@ -185,7 +185,7 @@
                 class="float-right"
                 color="secondary"
                 :label="$t('index.eosdac')"
-                @click.native="openURL($configFile.get('external').homepage)"
+                @click.native="openURL('https://eosdac.io')"
               />
             </div>
           </div>
