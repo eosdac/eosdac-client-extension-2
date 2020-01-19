@@ -1,14 +1,15 @@
-import { jungle } from '../../../networks'
-
 export default {
   'dacId': 'eos.dac',
 
-  'endpoints': jungle,
+  'endpoints': [
+    'https://jungle.eosdac.io',
+    'https://api.jungle.alohaeos.com'
+  ],
 
-  'pricefeed': {
+  /* 'pricefeed': {
     api: 'newdex',
     newdex: { symbol: 'eosdactokens-eosdac-eos', endpoint: 'https://api.newdex.io/v1/ticker' }
-  },
+  }, */
 
   'network': {
     'name': 'jungle',
@@ -31,16 +32,6 @@ export default {
       'name': 'eosio.msig'
     }
   },
-
-  'financial_page_graphs': [
-    {
-      'account': 'eosdacdoshhq',
-      'contract': 'eosio.token',
-      'symbol': 'EOS',
-      'description':
-            'The DAC owner account where DAC funds are secured and controlled by a 12-account multisig permission system of elected custodians.'
-    }
-  ],
 
   'api': {
     'dac_api': 'http://127.0.0.1:8383/v1/eosdac',
